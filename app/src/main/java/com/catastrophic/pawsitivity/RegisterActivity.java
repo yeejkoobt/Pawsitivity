@@ -35,18 +35,20 @@ public class RegisterActivity extends AppCompatActivity {
         usernameField = (EditText) findViewById(R.id.usernameField);
         registerButton = (Button) findViewById(R.id.registerButton);
         passwordField = (EditText) findViewById(R.id.passwordField);
-        registerButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String username = usernameField.getText().toString();
-                String password = passwordField.getText().toString();
-                new RetrieveFeedTask().execute(username, password);
-            }
-        });
+//        registerButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                String username = usernameField.getText().toString();
+//                String password = passwordField.getText().toString();
+//                new RetrieveFeedTask().execute(username, password);
+//            }
+//        });
     }
 
     public void handleRegisterClicked(View view) {
-
+        String username = usernameField.getText().toString();
+        String password = passwordField.getText().toString();
+        new RetrieveFeedTask().execute(username, password);
     }
 
     class RetrieveFeedTask extends AsyncTask<String, String, String> {
@@ -64,9 +66,8 @@ public class RegisterActivity extends AppCompatActivity {
             // Do some validation here
 
             try {
-                urlForAPI += "users/" + username + "/" + password;
-                URL url = new URL(urlForAPI);
-                urlForAPI = "https://pawsitivity-api.herokuapp.com/";
+                String whereToSearch = urlForAPI + "users/" + username + "/" + password;
+                URL url = new URL(whereToSearch);
                 HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
                 try {
                     BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
