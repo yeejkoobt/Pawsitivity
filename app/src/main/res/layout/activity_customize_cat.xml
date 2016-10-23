@@ -1,18 +1,170 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_customize_cat"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
     tools:context="com.catastrophic.pawsitivity.CustomizeCatActivity">
-    <HorizontalScrollView
+
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:paddingBottom="30dp"
+        android:gravity="center_horizontal">
+
         <LinearLayout
-            android:id="@+id/imageGallery"
-            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" />
-    </HorizontalScrollView>
+            android:paddingBottom="50dp"
+            android:paddingRight="40dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/blue"
+                android:layout_weight="1"
+                android:background="#7BD3F7"
+                android:onClick="blueButtonClicked" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/brown"
+                android:layout_weight="1"
+                android:background="#A0844B"
+                android:onClick="brownButtonClicked" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/gray"
+                android:layout_weight="1"
+                android:background="#5A6269"
+                android:onClick="grayButtonClicked" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/green"
+                android:layout_weight="1"
+                android:background="#B0D35A"
+                android:onClick="greenButtonClicked" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/orange"
+                android:layout_weight="1"
+                android:background="#F49A40"
+                android:onClick="orangeButtonClicked" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/pink"
+                android:layout_weight="1"
+                android:background="#F288B7"
+                android:onClick="pinkButtonClicked"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/white"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:onClick="whiteButtonClicked"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/yellow"
+                android:layout_weight="1"
+                android:background="#FEDC80"
+                android:onClick="yellowButtonClicked"/>
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="238dp"
+            >
+            <LinearLayout
+                android:id="@+id/imageGallery"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="bottom"
+                android:layout_marginLeft="20dp">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/plain"
+                    android:layout_weight="1"
+                    android:background="@drawable/cat_blue_plain" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/batman"
+                    android:layout_weight="1"
+                    android:background="@drawable/cat_blue_batman" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chef"
+                    android:layout_weight="1"
+                    android:background="@drawable/cat_blue_chef" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ghost"
+                    android:layout_weight="1"
+                    android:background="@drawable/cat_blue_ghost" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/hairypotter"
+                    android:layout_weight="1"
+                    android:background="@drawable/cat_blue_hairypotter" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/mummy"
+                    android:layout_weight="1"
+                    android:background="@drawable/cat_blue_mummy" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pineapple"
+                    android:layout_weight="1"
+                    android:background="@drawable/cat_blue_pineapple" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pumpkin"
+                    android:layout_weight="1"
+                    android:background="@drawable/cat_blue_pumpkin" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/witch"
+                    android:layout_weight="1"
+                    android:background="@drawable/cat_blue_witch" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
 </RelativeLayout>
