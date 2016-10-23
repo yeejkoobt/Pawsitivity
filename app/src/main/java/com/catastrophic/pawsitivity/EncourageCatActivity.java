@@ -43,6 +43,7 @@ public class EncourageCatActivity extends AppCompatActivity {
     private TextView encouragement;
     private Random numberGenerator;
     private MediaPlayer mediaPlayer;
+    private int index;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -116,12 +117,12 @@ public class EncourageCatActivity extends AppCompatActivity {
         encouragement = (TextView) findViewById(R.id.encouragement);
         Intent intent = getIntent();
         color = intent.getStringExtra("color");
-        int index = intent.getIntExtra("index", 1);
+        index = intent.getIntExtra("index", 1);
         encourageCat = (ImageView) findViewById(R.id.encourageCat);
         encourageCat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(color.equals("yellow")) {
+                if(color.equals("yellow") && index == 6) {
                     yellowCatPoseIndex = numberGenerator.nextInt(5);
                     encourageCat.setImageResource(yellowCatPoses[yellowCatPoseIndex]);
                 }
