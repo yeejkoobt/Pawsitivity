@@ -122,7 +122,7 @@ public class EncourageCatActivity extends AppCompatActivity {
         encourageCat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(color.equals("yellow") && index == 6) {
+                if(color.equals("yellow") && index == 7) {
                     yellowCatPoseIndex = numberGenerator.nextInt(5);
                     encourageCat.setImageResource(yellowCatPoses[yellowCatPoseIndex]);
                 }
