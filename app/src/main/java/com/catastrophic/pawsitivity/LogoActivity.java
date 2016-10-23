@@ -27,7 +27,7 @@ public class LogoActivity extends AppCompatActivity {
 
             @Override
             public void onAnimationEnd(Animation animation) {
-                Intent intent = new Intent(LogoActivity.this, WelcomeActivity.class);
+                Intent intent = new Intent(LogoActivity.this, CatWalkActivity.class);
                 startActivity(intent);
             }
 

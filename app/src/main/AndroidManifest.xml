@@ -40,6 +40,10 @@
         <activity
             android:name=".EncourageCatActivity"
             />
+        <activity
+            android:name=".CatWalkActivity"
+            android:label="Pimp Cat Animation!"
+            />
     </application>
 
 </manifest>
