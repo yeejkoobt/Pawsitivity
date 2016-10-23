@@ -9,7 +9,7 @@ import android.widget.LinearLayout;
 
 public class CustomizeCatActivity extends AppCompatActivity {
 
-    private Integer[] images = {R.drawable.hello, R.drawable.hello2, R.drawable.hello3};
+//    private Integer[] images = {R.drawable.hello, R.drawable.hello2, R.drawable.hello3};
     //R.drawable.cat_blue_ghost, R.drawable.cat_blue_hairypotter,
     //R.drawable.cat_blue_mummy, R.drawable.cat_blue_pineapple, R.drawable.cat_blue_plain, R.drawable.cat_blue_pumpkin, R.drawable.cat_blue_witch
 
@@ -17,15 +17,15 @@ public class CustomizeCatActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customize_cat);
-        addImagesToTheGallery();
+//        addImagesToTheGallery();
     }
 
-    private void addImagesToTheGallery() {
-        LinearLayout imageGallery = (LinearLayout) findViewById(R.id.imageGallery);
-        for (Integer image : images) {
-            imageGallery.addView(getImageView(image));
-        }
-    }
+//    private void addImagesToTheGallery() {
+//        LinearLayout imageGallery = (LinearLayout) findViewById(R.id.imageGallery);
+//        for (Integer image : images) {
+//            imageGallery.addView(getImageView(image));
+//        }
+//    }
 
     private View getImageView(Integer image) {
         ImageView imageView = new ImageView(getApplicationContext());

@@ -4,6 +4,7 @@
     android:id="@+id/activity_customize_cat"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context="com.catastrophic.pawsitivity.CustomizeCatActivity">
     <HorizontalScrollView
         android:layout_width="match_parent"
