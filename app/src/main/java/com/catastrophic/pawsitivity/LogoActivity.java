@@ -29,6 +29,8 @@ public class LogoActivity extends AppCompatActivity {
             public void onAnimationEnd(Animation animation) {
                 Intent intent = new Intent(LogoActivity.this, CatWalkActivity.class);
                 startActivity(intent);
+//                Intent svc=new Intent(LogoActivity.this, BackgroundSoundService.class);
+//                startService(svc);
             }
 
             @Override

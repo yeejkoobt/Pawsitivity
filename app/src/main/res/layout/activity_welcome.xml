@@ -12,12 +12,14 @@
     tools:context="com.catastrophic.pawsitivity.WelcomeActivity">
 
     <LinearLayout
+        android:id="@+id/mainMenu"
         android:orientation="vertical"
         android:layout_width="150dp"
         android:layout_height="match_parent"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_marginTop="302dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
 
         <Button
             android:text="@string/login"
@@ -40,5 +42,32 @@
             android:id="@+id/button5"
             android:onClick="handleInstantClicked" />
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/pimpCat"
+        android:layout_width="1000px"
+        android:layout_height="700px"
+        android:background="@drawable/pimp_cat"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="225dp" />
+
+    <ImageView
+        android:id="@+id/prayCat"
+        android:layout_width="250px"
+        android:layout_height="300px"
+        android:background="@drawable/pray_cat"
+        android:layout_alignTop="@+id/mainMenu"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="21dp" />
+
+    <ImageView
+        android:id="@+id/buttCat"
+        android:layout_width="450px"
+        android:layout_height="500px"
+        android:background="@drawable/butt_cat"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
 
 </RelativeLayout>
