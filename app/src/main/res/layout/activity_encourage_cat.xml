@@ -11,4 +11,18 @@
     android:background="@drawable/background"
     tools:context="com.catastrophic.pawsitivity.EncourageCatActivity">
 
+    <TextView
+        android:id="@+id/encouragement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/encourageCat"/>
+
+    <ImageView
+        android:id="@+id/encourageCat"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </RelativeLayout>

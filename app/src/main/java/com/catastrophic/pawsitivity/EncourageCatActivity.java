@@ -9,5 +9,7 @@ public class EncourageCatActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_encourage_cat);
+
+        String[]encouragementList = new String[58];
     }
 }
