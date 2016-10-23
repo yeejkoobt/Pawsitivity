@@ -94,6 +94,7 @@ public class LoginActivity extends AppCompatActivity {
                         Toast.LENGTH_SHORT).show();
             } else if (response.equals("true")) {
                 Intent intent = new Intent(LoginActivity.this, EncourageCatActivity.class);
+                intent.putExtra("color", "");
                 startActivity(intent);
             }
             progressBar.setVisibility(View.GONE);

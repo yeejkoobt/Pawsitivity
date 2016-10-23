@@ -18,7 +18,7 @@ public class LogoActivity extends AppCompatActivity {
 
     private void doAnimation() {
         ImageView imageView = (ImageView) findViewById(R.id.pawsitivityLogo);
-        Animation fadeIn = AnimationUtils.loadAnimation(this, R.anim.fade_in);
+        Animation fadeIn = AnimationUtils.loadAnimation(this, R.anim.fade_out);
         fadeIn.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
@@ -27,6 +27,11 @@ public class LogoActivity extends AppCompatActivity {
 
             @Override
             public void onAnimationEnd(Animation animation) {
+                try {
+                    Thread.sleep(3000);
+                } catch (Exception e) {
+                    // error here
+                }
                 Intent intent = new Intent(LogoActivity.this, CatWalkActivity.class);
                 startActivity(intent);
 //                Intent svc=new Intent(LogoActivity.this, BackgroundSoundService.class);
