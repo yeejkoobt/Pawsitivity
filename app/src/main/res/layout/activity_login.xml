@@ -50,7 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/loginButton"
-            android:onClick="handleLoginClicked (LoginActivity)" />
+            android:onClick="handleLoginClicked" />
 
         <RelativeLayout
             android:layout_width="match_parent"
