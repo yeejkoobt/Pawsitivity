@@ -13,17 +13,28 @@
 
     <TextView
         android:id="@+id/encouragement"
-        android:textSize="20dp"
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:layout_above="@+id/encourageCat"/>
+        android:layout_centerHorizontal="true"/>
 
-    <ImageView
-        android:id="@+id/encourageCat"
+    <RelativeLayout
+        android:id="@+id/catLayout"
+        android:layout_width="450px"
+        android:layout_height="400px"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_centerVertical="true">
+        <ImageView
+            android:id="@+id/encourageCat"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+    </RelativeLayout>
+
 </RelativeLayout>

@@ -27,6 +27,11 @@ public class LogoActivity extends AppCompatActivity {
 
             @Override
             public void onAnimationEnd(Animation animation) {
+                try {
+                    Thread.sleep(3000);
+                } catch (Exception e) {
+                    // error here
+                }
                 Intent intent = new Intent(LogoActivity.this, CatWalkActivity.class);
                 startActivity(intent);
 //                Intent svc=new Intent(LogoActivity.this, BackgroundSoundService.class);
