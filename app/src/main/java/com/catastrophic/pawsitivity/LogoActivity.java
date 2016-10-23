@@ -18,7 +18,7 @@ public class LogoActivity extends AppCompatActivity {
 
     private void doAnimation() {
         ImageView imageView = (ImageView) findViewById(R.id.pawsitivityLogo);
-        Animation fadeIn = AnimationUtils.loadAnimation(this, R.anim.fade_in);
+        Animation fadeIn = AnimationUtils.loadAnimation(this, R.anim.fade_out);
         fadeIn.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {

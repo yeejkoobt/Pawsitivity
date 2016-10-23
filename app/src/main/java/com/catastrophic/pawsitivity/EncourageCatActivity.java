@@ -35,9 +35,14 @@ public class EncourageCatActivity extends AppCompatActivity {
     private Integer[] yellow = {R.drawable.cat_yellow_plain, R.drawable.cat_yellow_batman, R.drawable.cat_yellow_chef, R.drawable.cat_yellow_ghost, R.drawable.cat_yellow_hairypotter,
             R.drawable.cat_yellow_mummy, R.drawable.cat_yellow_pineapple, R.drawable.cat_yellow_pumpkin, R.drawable.cat_yellow_witch};
 
+    private Integer[] yellowCatPoses = {R.drawable.yellow_cat_pose_1, R.drawable.yellow_cat_pose_2, R.drawable.yellow_cat_pose_3, R.drawable.yellow_cat_pose_4, R.drawable.yellow_cat_pose_5};
     private ImageView encourageCat;
     private int quoteNum;
-
+    private int yellowCatPoseIndex;
+    private String color;
+    private TextView encouragement;
+    private Random numberGenerator;
+    private MediaPlayer mediaPlayer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -104,18 +109,22 @@ public class EncourageCatActivity extends AppCompatActivity {
         quotes[55] = "There are two ways of exerting one’s strength: one is pushing down, the other is pulling up. ~Booker T. Washington";
         quotes[56] = "Life is a gift, and it offers us the privilege, opportunity, and responsibility to give something back by becoming more. ~Tony Robbins";
 
-        final MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.meow);
+        mediaPlayer = MediaPlayer.create(this, R.raw.meow);
         mediaPlayer.setVolume(100,100);
         mediaPlayer.setLooping(false);
-        final Random numberGenerator = new Random();
-        final TextView encouragement = (TextView) findViewById(R.id.encouragement);
+        numberGenerator = new Random();
+        encouragement = (TextView) findViewById(R.id.encouragement);
         Intent intent = getIntent();
-        String color = intent.getStringExtra("color");
+        color = intent.getStringExtra("color");
         int index = intent.getIntExtra("index", 1);
         encourageCat = (ImageView) findViewById(R.id.encourageCat);
         encourageCat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(color.equals("yellow")) {
+                    yellowCatPoseIndex = numberGenerator.nextInt(5);
+                    encourageCat.setImageResource(yellowCatPoses[yellowCatPoseIndex]);
+                }
                 quoteNum = numberGenerator.nextInt(56);
                 mediaPlayer.start();
                 encouragement.setText(quotes[quoteNum]);
