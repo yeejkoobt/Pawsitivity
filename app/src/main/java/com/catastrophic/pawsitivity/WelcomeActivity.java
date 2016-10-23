@@ -47,6 +47,7 @@ public class WelcomeActivity extends AppCompatActivity {
      */
     public void handleInstantClicked(View view) {
         Intent intent = new Intent(this, EncourageCatActivity.class);
+        intent.putExtra("color", "");
         startActivity(intent);
     }
 
