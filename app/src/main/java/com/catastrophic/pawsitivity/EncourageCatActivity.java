@@ -1,6 +1,7 @@
 package com.catastrophic.pawsitivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -103,6 +104,9 @@ public class EncourageCatActivity extends AppCompatActivity {
         quotes[55] = "There are two ways of exerting one’s strength: one is pushing down, the other is pulling up. ~Booker T. Washington";
         quotes[56] = "Life is a gift, and it offers us the privilege, opportunity, and responsibility to give something back by becoming more. ~Tony Robbins";
 
+        final MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.meow);
+        mediaPlayer.setVolume(100,100);
+        mediaPlayer.setLooping(false);
         final Random numberGenerator = new Random();
         final TextView encouragement = (TextView) findViewById(R.id.encouragement);
         Intent intent = getIntent();
@@ -113,11 +117,9 @@ public class EncourageCatActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 quoteNum = numberGenerator.nextInt(56);
-                if(quotes!=null) {
-                    encouragement.setText("MEOW MEOW MEEEEEOOOWWW!");
-                } else {
-                    encouragement.setText(quotes[quoteNum]);
-                }
+                mediaPlayer.start();
+                encouragement.setText(quotes[quoteNum]);
+
             }
         });
         if (color.equals("")) {
