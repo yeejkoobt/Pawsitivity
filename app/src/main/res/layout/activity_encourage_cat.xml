@@ -18,13 +18,14 @@
         android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"/>
 
     <RelativeLayout
         android:id="@+id/catLayout"
-        android:layout_width="450px"
-        android:layout_height="400px"
+        android:layout_width="700px"
+        android:layout_height="800px"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true">
