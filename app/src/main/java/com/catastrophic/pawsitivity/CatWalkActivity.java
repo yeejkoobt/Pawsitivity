@@ -9,8 +9,11 @@ import android.graphics.Point;
 import android.graphics.drawable.AnimationDrawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.sax.StartElementListener;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Display;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 /**
@@ -22,6 +25,7 @@ public class CatWalkActivity extends AppCompatActivity {
     private ImageView dog2;
     private ImageView dog3;
     private AnimationDrawable catWalkAnimation;
+    boolean isSkipButtonPressed = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +37,16 @@ public class CatWalkActivity extends AppCompatActivity {
         display.getSize(size);
         int width = size.x;
         int height = size.y;
+
+        Button skipButton = (Button) findViewById(R.id.skipButton);
+        skipButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                isSkipButtonPressed = true;
+                Intent skipIntent = new Intent(CatWalkActivity.this, WelcomeActivity.class);
+                startActivity(skipIntent);
+            }
+        });
 
         MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.panda_designer);
         mediaPlayer.setVolume(100,100);
@@ -48,8 +62,10 @@ public class CatWalkActivity extends AppCompatActivity {
 
             @Override
             public void onAnimationEnd(Animator animation) {
-                Intent intent = new Intent(CatWalkActivity.this, WelcomeActivity.class);
-                startActivity(intent);
+                if(!isSkipButtonPressed) {
+                    Intent intent = new Intent(CatWalkActivity.this, WelcomeActivity.class);
+                    startActivity(intent);
+                }
             }
 
             @Override

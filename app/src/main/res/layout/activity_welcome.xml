@@ -14,10 +14,10 @@
     <LinearLayout
         android:id="@+id/mainMenu"
         android:orientation="vertical"
-        android:layout_width="150dp"
+        android:layout_width="165dp"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:layout_marginTop="302dp"
+        android:layout_marginTop="200dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true">
 
@@ -25,6 +25,7 @@
             android:text="@string/login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
             android:id="@+id/loginButton"
             android:onClick="handleLoginClicked" />
 
@@ -32,14 +33,16 @@
             android:text="@string/register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/button4"
+            android:layout_margin="5dp"
+            android:id="@+id/registerButton"
             android:onClick="handleRegisterClicked" />
 
         <Button
             android:text="@string/instant"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/button5"
+            android:layout_margin="5dp"
+            android:id="@+id/instantEncourageButton"
             android:onClick="handleInstantClicked" />
     </LinearLayout>
 
@@ -50,24 +53,25 @@
         android:background="@drawable/pimp_cat"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="225dp" />
+        android:layout_marginBottom="300dp" />
 
     <ImageView
         android:id="@+id/prayCat"
         android:layout_width="250px"
         android:layout_height="300px"
         android:background="@drawable/pray_cat"
-        android:layout_alignTop="@+id/mainMenu"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="21dp" />
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp" />
 
     <ImageView
         android:id="@+id/buttCat"
-        android:layout_width="450px"
-        android:layout_height="500px"
+        android:layout_width="250px"
+        android:layout_height="300px"
         android:background="@drawable/butt_cat"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="14dp" />
 
 
 </RelativeLayout>
