@@ -41,6 +41,7 @@ public class CustomizeCatActivity extends AppCompatActivity {
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
         lp.setMargins(0, 0, 10, 0);
         imageView.setLayoutParams(lp);
+        imageView.setPadding(imageView.getPaddingLeft(),imageView.getPaddingTop(),imageView.getPaddingRight(),0);
         //imageView.getLayoutParams().height = 100;
         //imageView.getLayoutParams().width = 100;
         imageView.setImageResource(image);
