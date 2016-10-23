@@ -29,4 +29,12 @@ public class WelcomeActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    /**
+     * called when the user clicks the Instant Encouragement button
+     */
+    public void handleInstantClicked(View view) {
+        Intent intent = new Intent(this, EncourageCatActivity.class);
+        startActivity(intent);
+    }
+
 }

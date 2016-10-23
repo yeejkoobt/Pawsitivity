@@ -36,7 +36,8 @@
             android:text="@string/instant"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/button5" />
+            android:id="@+id/button5"
+            android:onClick="handleInstantClicked" />
     </LinearLayout>
 
 </RelativeLayout>
