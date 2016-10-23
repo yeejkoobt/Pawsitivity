@@ -1,5 +1,6 @@
 package com.catastrophic.pawsitivity;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -32,6 +33,7 @@ public class CustomizeCatActivity extends AppCompatActivity {
 
     private LinearLayout imageGallery;
     private String color;
+    public final static String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
 
     private Button plain;
     private Button batman;
@@ -64,10 +66,37 @@ public class CustomizeCatActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     System.out.println(v.getBackground().toString());
-//                    String fileName = "cat_" + color + "_";
-//                    if (v.getId() == plain.getId()) {
-//                        fileName +=""
-//                    }
+                    int indexOfCustome;
+                    if (v.getId() == plain.getId()) {
+                        indexOfCustome = 0;
+                    } else if (v.getId() == batman.getId()) {
+                        indexOfCustome = 1;
+                    } else if (v.getId() == chef.getId()) {
+                        indexOfCustome = 2;
+                    } else if (v.getId() == ghost.getId()) {
+                        indexOfCustome = 3;
+                    } else if (v.getId() == hairypotter.getId()) {
+                        indexOfCustome = 4;
+                    } else if (v.getId() == mummy.getId()) {
+                        indexOfCustome = 5;
+                    } else if (v.getId() == pineapple.getId()) {
+                        indexOfCustome = 6;
+                    } else if (v.getId() == pumpkin.getId()) {
+                        indexOfCustome = 7;
+                    } else {
+                        // witch custome index
+                        indexOfCustome = 8;
+                    }
+
+                    Intent intent = new Intent(CustomizeCatActivity.this, EncourageCatActivity.class);
+                    intent.putExtra("color", color);
+                    intent.putExtra("index", indexOfCustome);
+                    startActivity(intent);
+
+//                   Drawable drawable = v.getBackground();
+//                    Bundle bundle = new Bundle();
+//                    bundle.
+//                    intent.putExtra(EXTRA_MESSAGE, Bundle)
 
                 }
             }
