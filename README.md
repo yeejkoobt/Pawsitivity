@@ -1,4 +1,4 @@
-<img src="Pawsitivity/app/src/main/res/drawable/logo_halloween.png" align="right" />
+<img src="./app/src/main/res/drawable/logo_halloween.png" align="Right" />
 # Pawsitivity
 
 This repositroy holds our cute and cuddly encourager app!
