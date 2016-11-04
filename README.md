@@ -38,6 +38,7 @@ Link to Pawsitivity-API: https://github.com/yeejkoobt/Pawsitivity-API.git
 * Other guidelines
     * Never push directly to master unless it is the initial commit (which has already been done).
 Use feature branches to implement changes to the application.
+
 ### Who do I talk to? ###
 
 * Repo owner or admin
